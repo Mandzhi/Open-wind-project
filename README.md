@@ -4,7 +4,7 @@ Wind energy prediction for the La-Haute-Borne onshore wind farm (is released as 
 
 ## Summary
 
-The current project investigates data-driving methods to predict wind energy generation for the onshore "La Haute Borne" wind farm. The hybrid model was suggested to get short-term power forecasts using both historical in situ measurements available from ENGIE and global reanalysis data of MERRA-2. It was shown that adding three extra meteorological parameters - pressure, humidity, and temperature - allowed to reach a higher accuracy compared with cases when weather parameters were completely ignored or used partially; this was proved by applying multivariate, one-step long short-term memory (LSTM) networks. Additionally, it was shown that the CNN-LSTM approach allowed to reach a better accuracy while predicting wind power for 12h and 24h ahead compared to the LSTM model.
+The current project investigates data-driving methods to predict wind energy generation for the onshore "La Haute Borne" wind farm. The hybrid model was suggested to get short-term power forecasts using both historical in situ measurements available from ENGIE and global reanalysis data of MERRA-2. It was shown that adding three extra meteorological parameters - pressure, humidity, and temperature (Case 3) - allowed to reach a higher accuracy compared with cases when weather parameters were completely ignored (Case 1) or used partially (Case 2); this was proved by applying multivariate, one-step long short-term memory (LSTM) networks. Additionally, it was shown that the CNN-LSTM approach allowed to reach a better accuracy while predicting wind power for 12h and 24h ahead compared to the LSTM model.
 
 ## Background
 
@@ -26,31 +26,55 @@ Once you upload an image to your repository, you can link to it like this (repla
 If you need to resize images, you have to use an HTML tag, like this:
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
 
-This is how you create code examples:
-```
-def main():
-   countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-   pop = [5615000, 5439000, 324000, 5080000, 9609000]   # not actually needed in this exercise...
-   fishers = [1891, 2652, 3800, 11611, 1757]
-
-   totPop = sum(pop)
-   totFish = sum(fishers)
-
-   # write your solution here
-
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
-
-main()
-```
-
-## Data sources and AI methods
+## Data sources
 Historical in situ measurements for the La-Haute-Borne wind park were available from [ENGIE](https://opendata-renewables.engie.com/) and global reanalysis data were taken as a part of MERRA-2 project from [NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+## Results
+
+The main drawback of applying multivariate, one-step LSTM method is that in this case the whole test dataset is forecasted at once, which is not how it really happens. Thus, to improve the quality of the forecasts we need to apply multivariate, multi-step LSTM and CNN-LSTM scheme. 
+
+This is a part of the code for applying LSTM method:
+
+```
+# Define the model
+from keras.models import Sequential
+from keras.layers import Dense, LSTM, Dropout #, Flatten, RepeatVector #Dropout
+#from keras.layers.convolutional import Conv1D
+#from keras.layers.convolutional import MaxPooling1D
+
+model = Sequential()
+model.add(LSTM(100, return_sequences = True,
+               input_shape=(n_steps_in, n_features)))
+#model.add(RepeatVector(n_steps_out))
+model.add(LSTM(100))
+model.add(Dense(n_steps_out))
+```
+
+And this is - a part of the code for CNN-LSTM 24h forecast:
+
+```
+# Define the model
+from keras.models import Sequential
+from keras.layers import Dense, LSTM
+from keras.layers.convolutional import Conv1D
+from keras.layers.convolutional import MaxPooling1D
+model = Sequential()
+model.add(Conv1D(nb_filter=64, filter_length=3,
+                 activation='relu', input_shape=(n_steps_in, n_features)))
+#model.add(Conv1D(nb_filter=64, filter_length=3, activation='relu'))
+#model.add(Conv1D(nb_filter=32, filter_length=4, activation='relu'))
+#model.add(Conv1D(nb_filter=64, filter_length=3, activation='relu'))
+model.add(MaxPooling1D(pool_length=6))
+model.add(LSTM(180, activation='relu'))
+model.add(Dense(n_steps_out))
+```
+Here n_steps_out = 24 (24 hour forecast). Table below is summarized some other parameters:
+
+| Parameter        | Value       |
+| ---------------- | ----------- |
+| Iterations       | 30          |
+| Layers LSTM      | 2           |
+| Layers CNN-LSTM  | 3 + 1       |
 
 ## Challenges
 
