@@ -1,6 +1,4 @@
-# Project Title
-
-Wind energy prediction for the La-Haute-Borne onshore wind farm (is released as a Building AI course project)
+# Wind energy prediction for the La-Haute-Borne onshore wind farm (is released as a Building AI course project)
 
 ## Summary
 
