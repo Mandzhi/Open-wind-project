@@ -19,13 +19,6 @@ The currect project aims to solve the following issues:
 
 The project was implemented using [Python](https://www.python.org/) as the main source for writing codes with Pandas, Numpy, Tensorflow with Keras. In particular, first it was required to read .csv files from ENGIE, merge them, preprocess data and then merge this dataset with data available from MERRA-2 project. This enriched dataset was then used for all wind forecasts (70% of data is a training set, 10% - a validation set, and remaining 20% - a test set).
 
-Images will make your README look nice!
-Once you upload an image to your repository, you can link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
-![Cat](https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg)
-
-If you need to resize images, you have to use an HTML tag, like this:
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
-
 ## Data sources
 Historical in situ measurements for the La-Haute-Borne wind park were available from [ENGIE](https://opendata-renewables.engie.com/) and global reanalysis data were taken as a part of MERRA-2 project from [NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
 
@@ -75,6 +68,14 @@ Here n_steps_out = 24 (24 hour forecast). Table below is summarized some other p
 | Iterations       | 30          |
 | Layers LSTM      | 2           |
 | Layers CNN-LSTM  | 3 + 1       |
+
+Figure below shows comparison between three cases - when additional weather parameters from MERRA-2 project were ignored within the forecast (Case 1 with pink markers), used partially (only outdoor temperature, Case 2 with green markers) or fully (temperature, pressure, humidity - Case 3 with blue markers). 
+
+![weather](https://github.com/Mandzhi/Open_wind_La-Haute-Borne/blob/main/LSTM-one-step-weather-comparison.jpg)
+
+Another figure demonstrates comparison between multi-variate CNN-LSTM and LSTM models for (a) 12 hours and (b) 24 hours. Here it can be seen that CNN-LSTM was able to capture almost all fluctuations in a proper manner, while base LSTM has an averaged trend.
+
+![cnn-lstm_vs_lstm](https://github.com/Mandzhi/Open_wind_La-Haute-Borne/blob/main/12h_24h_forecasts_multivariate_lstm_cnn-lstm.jpg)
 
 ## Challenges
 
