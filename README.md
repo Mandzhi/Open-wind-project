@@ -8,7 +8,7 @@ The current project investigates data-driving methods to predict wind energy gen
 
 ## Background
 
-2019 year showed a strong growth of renewable energy - the latter was able to increase its share by a record amount, accounting for over 40% of the growth in primary energy, mainly because of wind and solar power; in particular, wind provided the largest contribution to renewables growth - 1.4 EJ [BP](https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html).
+According to [BP](https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html), 2019 year showed a strong growth of renewable energy - the latter was able to increase its share by a record amount, accounting for over 40% of the growth in primary energy, mainly because of wind and solar power; in particular, wind provided the largest contribution to renewables growth - 1.4 EJ.
 Most likely this trend of renewables rise in energy portfolio will continue in the future. Therefore, we need to predict wind energy output in a fast and reliable manner.
 
 The currect project aims to solve the following issues:
@@ -17,7 +17,7 @@ The currect project aims to solve the following issues:
 
 ## How is it used?
 
-The project was implemented using [Python] (https://www.python.org/) as the main source for writing codes with Pandas, Numpy, Tensorflow with Keras. In particular, first it was required to read .csv files from ENGIE, merge them, preprocess data and then merge this dataset with data available from MERRA-2 project. This enriched dataset was then used for all wind forecasts (70% of data is a training set, 10% - a validation set, and remaining 20% - a test set).
+The project was implemented using [Python](https://www.python.org/) as the main source for writing codes with Pandas, Numpy, Tensorflow with Keras. In particular, first it was required to read .csv files from ENGIE, merge them, preprocess data and then merge this dataset with data available from MERRA-2 project. This enriched dataset was then used for all wind forecasts (70% of data is a training set, 10% - a validation set, and remaining 20% - a test set).
 
 Images will make your README look nice!
 Once you upload an image to your repository, you can link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
