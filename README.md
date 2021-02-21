@@ -17,7 +17,7 @@ The currect project aims to solve the following issues:
 
 ## How is it used?
 
-The project was implemented using Python as the main source for writing codes with Pandas, Numpy, Tensorflow with Keras. In particular, first it was required to read .csv files from ENGIE, merge them, preprocess data and then merge this dataset with data available from MERRA-2 project. This enriched dataset was then used for all wind forecasts.
+The project was implemented using [Python] (https://www.python.org/) as the main source for writing codes with Pandas, Numpy, Tensorflow with Keras. In particular, first it was required to read .csv files from ENGIE, merge them, preprocess data and then merge this dataset with data available from MERRA-2 project. This enriched dataset was then used for all wind forecasts (70% of data is a training set, 10% - a validation set, and remaining 20% - a test set).
 
 Images will make your README look nice!
 Once you upload an image to your repository, you can link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
@@ -59,6 +59,10 @@ The current project was only focused on the short-term forecasts, therefore, it 
 ## What next?
 
 In addition to application of data-driven methods for long-term forecasts, it can be interesting to investigate some other available deep learning techniques, e.g. ConvLSTM networks.
+
+## Licence
+
+If you are going to use [ENGIE](https://opendata-renewables.engie.com/) dataset to practise, please notice that it has its own [LICENCE](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf).
 
 ## Acknowledgments
 
