@@ -4,7 +4,7 @@ Wind energy prediction for the La-Haute-Borne onshore wind farm (is released as 
 
 ## Summary
 
-The current project investigates data-driving methods to predict wind energy generation for the onshore "La Haute Borne" wind farm. The hybrid model was suggested to get short-term power forecasts using both historical in situ measurements available from ENGIE and global reanalysis data of MERRA-2. It was shown that adding three extra meteorological parameters - pressure, humidity, and temperature (Case 3) - allowed to reach a higher accuracy compared with cases when weather parameters were completely ignored (Case 1) or used partially (Case 2); this was proved by applying multivariate, one-step long short-term memory (LSTM) networks. Additionally, it was shown that the CNN-LSTM approach allowed to reach a better accuracy while predicting wind power for 12h and 24h ahead compared to the LSTM model.
+The project studies data-driving methods of wind power forecasts ("La Haute Borne" farm). It was found more meteorological parameters increase forecast accuracy. Additionally, a CNN-LSTM approach allows to reach a better fit compared to a LSTM model.
 
 ## Background
 
