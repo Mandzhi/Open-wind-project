@@ -17,7 +17,7 @@ The currect project aims to solve the following issues:
 
 ## How is it used?
 
-The project was implemented using [Python](https://www.python.org/) as the main source for writing codes with Pandas, Numpy, Tensorflow with Keras. In particular, first it was required to read .csv files from ENGIE, merge them, preprocess data and then merge this dataset with data available from MERRA-2 project. This enriched dataset was then used for all wind forecasts (70% of data is a training set, 10% - a validation set, and remaining 20% - a test set).
+The project was implemented using [Python](https://www.python.org/) as the main source for writing codes. First it was required to read .csv files from ENGIE, merge them, preprocess data and then merge this dataset with data available from MERRA-2 project. This enriched dataset was then used for all wind forecasts (70% of data is a training set, 10% - a validation set, and remaining 20% - a test set).
 
 ## Data sources
 Historical in situ measurements for the La-Haute-Borne wind park were available from [ENGIE](https://opendata-renewables.engie.com/) and global reanalysis data were taken as a part of MERRA-2 project from [NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
