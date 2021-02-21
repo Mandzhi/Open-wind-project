@@ -15,7 +15,7 @@ The currect project aims to solve the following issues:
 
 ## How is it used?
 
-The project is released as a Building AI course project and it was implemented using [Python](https://www.python.org/) as the main source for writing codes. First it was required to read .csv files from ENGIE, merge them, preprocess data and then merge this dataset with data available from MERRA-2 project. This enriched dataset was then used for all wind forecasts (70% of data is a training set, 10% - a validation set, and remaining 20% - a test set).
+The project was implemented using [Python](https://www.python.org/) as the main source for writing codes. First it was required to read .csv files from ENGIE, merge them, preprocess data and then merge this dataset with data available from MERRA-2 project. This enriched dataset was then used for all wind forecasts (70% of data is a training set, 10% - a validation set, and remaining 20% - a test set).
 
 ## Data sources
 Historical in situ measurements for the La-Haute-Borne wind park were available from [ENGIE](https://opendata-renewables.engie.com/) and global reanalysis data were taken as a part of MERRA-2 project from [NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
@@ -89,4 +89,4 @@ If you are going to use [ENGIE](https://opendata-renewables.engie.com/) dataset 
 
 ## Acknowledgments
 
-ENGIE Renewables is acknowledged for sharing their "La Haute Borne" dataset with researchers. It indeed helps to feel how difficult is to work with raw data. Gratitudes should also be sent to the Global Modeling and Assimilation Office (GMAO) at NASA Goddard Space Flight Center for the MERRA-2 reanalysis data which was provided through the NASA GES DISC online archive.
+ENGIE Renewables is acknowledged for sharing their "La Haute Borne" dataset with researchers. It indeed helps to feel how difficult is to work with raw data. Gratitudes should also be sent to the Global Modeling and Assimilation Office (GMAO) at NASA Goddard Space Flight Center for the MERRA-2 reanalysis data which was provided through the NASA GES DISC online archive. And I would like to thank BuildingAI course for encouraging me to make this project available via GitHub :)
