@@ -6,8 +6,6 @@ The project studies data-driving methods of wind power analysis and prediction. 
 
 ## Background
 
-According to [BP](https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html), 2019 year showed a strong growth of renewable energy - the latter was able to increase its share by a record amount, accounting for over 40% of the growth in primary energy, mainly because of wind and solar power; in particular, wind provided the largest contribution to renewables growth - 1.4 EJ. Most likely this trend of renewables rise in energy portfolio will continue in the future. Therefore, we need to predict wind energy output in a fast and reliable manner. With a current situation and cyclical climate changes, physical-based models seem to be unefficient for these purposes.
-
 The currect project aims to solve the following issues:
 * Prove that adding more meteorological data might help to improve the quality of forecasts. It was demonstrated by applying multivariate, one-step long short-term memory (LSTM) networks. 
 * Multivariate, multi-step deep learning networks were built for predicting wind power within 12h and 24h ahead. Here, CNN-LSTM network showed a higher accuracy compared with a case of applying LSTM network. 
