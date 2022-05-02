@@ -26,7 +26,7 @@ Figure below shows comparison between three cases - when additional weather para
 
 ![weather](https://github.com/Mandzhi/Open_wind_La-Haute-Borne/blob/main/LSTM-one-step.jpg)
 
-Another figure demonstrates comparison between multi-variate CNN-LSTM and LSTM models for 24 hours. Here it can be seen that CNN-LSTM model was able to capture almost all fluctuations in a proper manner, while a base LSTM network could only to follow the averaged trend. The RMSE for the CNN-LSTM network was 1.12 vs. 1.49 value of RMSE for the base LSTM model. 
+Another figure demonstrates comparison between multi-variate CNN-LSTM and LSTM models for 24 hours. Here it can be seen that CNN-LSTM model was able to capture almost all fluctuations in a proper manner, while a base LSTM network could only to follow the averaged trend. 
 
 ![cnn-lstm_vs_lstm](https://github.com/Mandzhi/Open_wind_La-Haute-Borne/blob/main/LSTM_multi_24h.jpg)
 
