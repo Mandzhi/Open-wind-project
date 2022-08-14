@@ -1,4 +1,4 @@
-# Wind energy prediction for the La-Haute-Borne onshore wind farm
+# Wind energy prediction for the onshore wind farm
 
 ## Summary
 
